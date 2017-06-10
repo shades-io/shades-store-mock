@@ -3,14 +3,18 @@
 const create = options => {
     const mockDB = {};
 
-    const putProjectionState = () => {};
-    const getProjectionState = () => {};
-    const persistEvent = () => {};
+    const putProjectionState = (namespace, projectionName, state) => {};
+    const getProjectionState = (namespace, projectionName) => {};
+    const appendEvent = (namespace, event) => {};
 
     return {
-        getProjectionState,
-        putProjectionState,
-        persistEvent
+        projectionState: {
+            put: putProjectionState,
+            get: getProjectionState
+        },
+        events: {
+            append: appendEvent
+        }
     };
 };
 
