@@ -35,6 +35,9 @@ const create = options => {
         },
         events: {
             append: appendEvent
+        },
+        namespaces: {
+            all: listAllNamespaces
         }
     };
 };
